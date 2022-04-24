@@ -1,0 +1,452 @@
+/* Initials CSS */
+
+.card {
+  width: 280px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 3rem;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .wrapper {
+  transform: rotateY(180deg);
+}
+
+/* Default fornt and back */
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.back h3 {
+  color: white;
+  text-transform: capitalize;
+  margin: 0.4rem 0;
+}
+
+.back h4 {
+  color: white;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+
+.card .wrapper h2 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* TYPES */
+
+.wrapper-type {
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-transform: none;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* PROGRESS BAR */
+
+.progressbar-container {
+  gap: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progressbar-container h4 {
+  width: 180px;
+  text-align: left;
+}
+
+.progressbar {
+  background-color: black;
+  border-radius: 0.5rem;
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.progressbar > div {
+  background-color: rgb(247, 188, 78);
+  height: 10px;
+  border-radius: 10px;
+}
+
+/* ABILITY */
+.abilities {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.ability {
+  background-color: #00000060;
+  color: #fff;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  width: 120px;
+}
+
+/* MAIN CARD COLORS */
+
+.card.grass {
+  border: 1px solid rgba(154, 204, 80, 0.6);
+  box-shadow: 0px 0px 50px rgba(154, 204, 80);
+}
+
+.card.fire {
+  border: 1px solid #fd7d2490;
+  box-shadow: 0px 0px 50px #fd7d24;
+}
+
+.card.dark {
+  border: 1px solid #58575f90;
+  box-shadow: 0px 0px 50px #58575f;
+}
+
+.card.bug {
+  border: 1px solid #8cb23061;
+  box-shadow: 0px 0px 50px #8cb230;
+}
+
+.card.poison {
+  border: 1px solid #b97fc990;
+  box-shadow: 0px 0px 50px #b97fc9;
+}
+
+.card.flying {
+  border: 1px solid #748fc990;
+  box-shadow: 0px 0px 50px #748fc9;
+}
+
+.card.normal {
+  border: 1px solid #9da0aa90;
+  box-shadow: 0px 0px 50px #9da0aa;
+}
+
+.card.water {
+  border: 1px solid #0f6ac090;
+  box-shadow: 0px 0px 50px #0f6ac0;
+}
+
+.card.electric {
+  border: 1px solid #eed53590;
+  box-shadow: 0px 0px 50px #eed535;
+}
+
+.card.ice {
+  border: 1px solid #61cec090;
+  box-shadow: 0px 0px 50px #61cec0;
+}
+
+.card.ground {
+  border: 1px solid #dd774890;
+  box-shadow: 0px 0px 50px #dd7748;
+}
+
+.card.ghost {
+  border: 1px solid #556aae90;
+  box-shadow: 0px 0px 50px #556aae;
+}
+
+.card.fighting {
+  border: 1px solid #d0416490;
+  box-shadow: 0px 0px 50px #d04164;
+}
+
+.card.psychic {
+  border: 1px solid #ea5d6090;
+  box-shadow: 0px 0px 50px #ea5d60;
+}
+
+.card.rock {
+  border: 1px solid #baab8290;
+  box-shadow: 0px 0px 50px #baab82;
+}
+
+.card.steel {
+  border: 1px solid #417d9a90;
+  box-shadow: 0px 0px 50px #417d9a;
+}
+
+.card.dragon {
+  border: 1px solid #0f6ac090;
+  box-shadow: 0px 0px 50px #0f6ac0;
+}
+
+.card.fairy {
+  border: 1px solid #ed6ec790;
+  box-shadow: 0px 0px 50px #0f6ac0;
+}
+
+/* FRONT COLORS */
+
+.front.grass {
+  background-color: #9acc5030;
+}
+
+.front.fire {
+  background-color: #fd7d243a;
+}
+
+.front.dark {
+  background-color: #58575f3a;
+}
+
+.front.bug {
+  background-color: #8cb2303a;
+}
+
+.front.water {
+  background-color: #417d9a3a;
+}
+
+.front.poison {
+  background-color: #b97fc93a;
+}
+
+.front.flying {
+  background-color: #748fc93a;
+}
+
+.front.normal {
+  background-color: #9da0aa3a;
+}
+
+.front.water {
+  background-color: #0f6ac03a;
+}
+
+.front.electric {
+  background-color: #eed5353a;
+}
+
+.front.ice {
+  background-color: #61cec03a;
+}
+
+.front.ground {
+  background-color: #dd77483a;
+}
+
+.front.ghost {
+  background-color: #556aae3a;
+}
+
+.front.fighting {
+  background-color: #d041643a;
+}
+
+.front.psychic {
+  background-color: #ea5d603a;
+}
+
+.front.rock {
+  background-color: #baab823a;
+}
+
+.front.steel {
+  background-color: #417d9a3a;
+}
+
+.front.dragon {
+  background-color: #0f6ac03a;
+}
+
+.front.fairy {
+  background-color: #ed6ec73a;
+}
+
+/* BACK COLORS */
+
+.back.dragon {
+  background-color: #0f6ac090;
+}
+
+.back.fairy {
+  background-color: #ed6ec790;
+}
+
+.back.grass {
+  background-color: #9acc5090;
+}
+
+.back.fire {
+  background-color: #fd7d2490;
+}
+
+.back.dark {
+  background-color: #58575f90;
+}
+
+.back.bug {
+  background-color: #8cb23090;
+}
+
+.back.water {
+  background-color: #0f6ac090;
+}
+
+.back.poison {
+  background-color: #b97fc990;
+}
+
+.back.flying {
+  background-color: #748fc990;
+}
+
+.back.normal {
+  background-color: #9da0aa90;
+}
+
+.back.electric {
+  background-color: #eed53590;
+}
+
+.back.ice {
+  background-color: #61cec090;
+}
+
+.back.ground {
+  background-color: #dd774890;
+}
+
+.back.ghost {
+  background-color: #556aae90;
+}
+
+.back.fighting {
+  background-color: #d0416490;
+}
+
+.back.psychic {
+  background-color: #ea5d6090;
+}
+
+.back.rock {
+  background-color: #baab8290;
+}
+
+.back.steel {
+  background-color: #417d9a90;
+}
+
+.back.dragon {
+  background-color: #0f6ac090;
+}
+
+.back.fairy {
+  background-color: #ed6ec790;
+}
+
+/*  TYPE COLORS */
+
+.card .wrapper .wrapper-types .wrapper-type.grass {
+  background: #9bcc50;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.fire {
+  background-color: #fd7d24;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.dark {
+  background-color: #58575f;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.bug {
+  background-color: #8cb230;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.water {
+  background-color: #417d9a;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.poison {
+  background-color: #b97fc9;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.flying {
+  background-color: #748fc9;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.normal {
+  background-color: #9da0aa;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.water {
+  background-color: #0f6ac0;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.electric {
+  background-color: #eed535;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.ice {
+  background-color: #61cec0;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.ground {
+  background-color: #dd7748;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.ghost {
+  background-color: #556aae;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.fighting {
+  background-color: #d04164;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.psychic {
+  background-color: #ea5d60;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.rock {
+  background-color: #baab82;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.steel {
+  background-color: #417d9a;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.dragon {
+  background-color: #0f6ac0;
+}
+
+.card .wrapper .wrapper-types .wrapper-type.fairy {
+  background-color: #ed6ec7;
+}

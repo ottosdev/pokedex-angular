@@ -1,0 +1,48 @@
+<div class="card" *ngIf="pokemon" [class]="pokemon.pokeTypes[0]">
+  <div class="wrapper">
+    <div class="front" [class]="pokemon.pokeTypes[0]">
+      <div class="wrapper-img">
+        <img [src]="getPokeImg()" alt="" />
+      </div>
+
+      <h2>{{ pokemon.name }}</h2>
+      <div class="wrapper-types" *ngFor="let type of pokemon.pokeTypes">
+        <div
+          class="wrapper-type"
+          [class]="type"
+          *ngIf="pokemon.pokeTypes.length === 2"
+        >
+          {{ type }}
+        </div>
+        <div
+          class="wrapper-type"
+          [class]="type"
+          *ngIf="pokemon.pokeTypes.length === 1"
+        >
+          {{ type }}
+        </div>
+      </div>
+    </div>
+    <div class="back" [class]="pokemon.pokeTypes[0]">
+      <!-- <div class="wrapper-img">
+        <img [src]="getPokeImg()" alt="" />
+      </div> -->
+
+      <h3>Status</h3>
+      <div *ngFor="let stats of pokemon.stats" class="progressbar-container">
+        <h4>{{ stats.stat.name }}</h4>
+        <div class="progressbar">
+          <div [ngStyle]="{'width.%': stats.base_stat, 'background-color': randomColor}"></div>
+        </div>
+      </div>
+      <h3>Abilities</h3>
+      <div class="abilities">
+        <div *ngFor="let ability of pokemon.abilities">
+          <div class="ability">
+            {{ ability.ability.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

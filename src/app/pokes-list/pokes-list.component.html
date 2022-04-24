@@ -1,0 +1,28 @@
+<div class="header">
+  <input
+    type="search"
+    placeholder="Search your pokemon"
+    [(ngModel)]="search"
+    (change)="filtrar(search)"
+  />
+</div>
+<div class="container" *ngIf="loading; else load">
+  <app-pokes-card
+    *ngFor="let poke of pokes; index as i"
+    [pokemon]="poke"
+    [number]="poke.id"
+  ></app-pokes-card>
+
+  <div class="go-top">
+    <button (click)="onActivate($event)"></button>
+  </div>
+
+  <div class="more">
+    <button (click)="more()"></button>
+  </div>
+
+</div>
+
+<ng-template #load>
+  <div class="loader"></div>
+</ng-template>
